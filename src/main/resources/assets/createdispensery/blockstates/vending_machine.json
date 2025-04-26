@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,half=lower": { "model": "createdispensery:block/vending_machine_bottom" },
+    "facing=south,half=lower": { "model": "createdispensery:block/vending_machine_bottom", "y": 180 },
+    "facing=west,half=lower":  { "model": "createdispensery:block/vending_machine_bottom", "y": 270 },
+    "facing=east,half=lower":  { "model": "createdispensery:block/vending_machine_bottom", "y": 90 },
+
+    "facing=north,half=upper": { "model": "createdispensery:block/vending_machine_top" },
+    "facing=south,half=upper": { "model": "createdispensery:block/vending_machine_top", "y": 180 },
+    "facing=west,half=upper":  { "model": "createdispensery:block/vending_machine_top", "y": 270 },
+    "facing=east,half=upper":  { "model": "createdispensery:block/vending_machine_top", "y": 90 }
+  }
+}

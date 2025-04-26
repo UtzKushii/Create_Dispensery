@@ -1,0 +1,193 @@
+{
+	"credit": "By UtzQuishii, made with Blockbench",
+	"texture_size": [128, 128],
+	"render_type": "cutout_mipped",
+	"particle": "createdispensery:block/vending_machine",
+	"textures": {
+		"1": "createdispensery:block/vending_machine"
+	},
+	"elements": [
+		{
+			"name": "Upper Left Wall",
+			"from": [0, 0, 1],
+			"to": [4, 14, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 2]},
+			"faces": {
+				"north": {"uv": [2, 7.75, 2.5, 9.5], "texture": "#1"},
+				"east": {"uv": [4, 3.75, 5.875, 5.5], "texture": "#1"},
+				"south": {"uv": [2.5, 7.75, 3, 9.5], "texture": "#1"},
+				"west": {"uv": [4, 5.5, 5.875, 7.25], "texture": "#1"},
+				"up": {"uv": [2, 7.875, 1.5, 6], "texture": "#1"},
+				"down": {"uv": [8, 1, 7.5, 2.875], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Upper Left Wall",
+			"from": [0, 0, 0],
+			"to": [1, 14, 1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 1]},
+			"faces": {
+				"north": {"uv": [8.25, 9.25, 8.375, 11], "texture": "#1"},
+				"east": {"uv": [8.375, 9.25, 8.5, 11], "texture": "#1"},
+				"south": {"uv": [4.5, 9.5, 4.625, 11.25], "texture": "#1"},
+				"west": {"uv": [4.625, 9.5, 4.75, 11.25], "texture": "#1"},
+				"up": {"uv": [8, 3, 7.875, 2.875], "texture": "#1"},
+				"down": {"uv": [8.5, 7, 8.375, 7.125], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Upper Left Wall",
+			"from": [3, 0, 0],
+			"to": [4, 14, 1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3, 0, 1]},
+			"faces": {
+				"north": {"uv": [4.75, 9.5, 4.875, 11.25], "texture": "#1"},
+				"east": {"uv": [4.875, 9.5, 5, 11.25], "texture": "#1"},
+				"south": {"uv": [5, 9.5, 5.125, 11.25], "texture": "#1"},
+				"west": {"uv": [5.125, 9.5, 5.25, 11.25], "texture": "#1"},
+				"up": {"uv": [8.5, 7.25, 8.375, 7.125], "texture": "#1"},
+				"down": {"uv": [8.25, 9.5, 8.125, 9.625], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Upper Right Wall",
+			"from": [14, 0, 0],
+			"to": [16, 14, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 0, 2]},
+			"faces": {
+				"north": {"uv": [1, 9, 1.25, 10.75], "texture": "#1"},
+				"east": {"uv": [2, 4, 4, 5.75], "texture": "#1"},
+				"south": {"uv": [1.25, 9, 1.5, 10.75], "texture": "#1"},
+				"west": {"uv": [4, 2, 6, 3.75], "texture": "#1"},
+				"up": {"uv": [3.25, 9.75, 3, 7.75], "texture": "#1"},
+				"down": {"uv": [3.5, 7.75, 3.25, 9.75], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Upper Rear Wall",
+			"from": [4, 0, 14],
+			"to": [14, 14, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 9]},
+			"faces": {
+				"north": {"uv": [6, 7.25, 7.25, 9], "texture": "#1"},
+				"east": {"uv": [3.5, 9, 3.75, 10.75], "texture": "#1"},
+				"south": {"uv": [7.25, 7.25, 8.5, 9], "texture": "#1"},
+				"west": {"uv": [3.75, 9, 4, 10.75], "texture": "#1"},
+				"up": {"uv": [10.375, 5.75, 9.125, 5.5], "texture": "#1"},
+				"down": {"uv": [10.375, 5.75, 9.125, 6], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Ceiling",
+			"from": [0, 14, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 14, 0]},
+			"faces": {
+				"north": {"uv": [8.5, 8, 10.5, 8.25], "texture": "#1"},
+				"east": {"uv": [8.5, 8.25, 10.5, 8.5], "texture": "#1"},
+				"south": {"uv": [8.5, 8.5, 10.5, 8.75], "texture": "#1"},
+				"west": {"uv": [8.625, 3, 10.625, 3.25], "texture": "#1"},
+				"up": {"uv": [2, 2, 0, 0], "texture": "#1"},
+				"down": {"uv": [2, 2, 0, 4], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Glass Casing",
+			"from": [4, 0, 0],
+			"to": [14, 14, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, -4, -5]},
+			"faces": {
+				"north": {"uv": [3.5, 7.25, 4.75, 9], "texture": "#1"},
+				"east": {"uv": [8.625, 5.25, 8.875, 7], "texture": "#1"},
+				"south": {"uv": [4.75, 7.25, 6, 9], "texture": "#1"},
+				"west": {"uv": [8.875, 5.25, 9.125, 7], "texture": "#1"},
+				"up": {"uv": [7.25, 3.75, 6, 3.5], "texture": "#1"},
+				"down": {"uv": [10.375, 5.25, 9.125, 5.5], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Top Shelf",
+			"from": [4, 6, 6],
+			"to": [14, 8, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 6, 0]},
+			"faces": {
+				"north": {"uv": [7, 9.25, 8.25, 9.5], "texture": "#1"},
+				"east": {"uv": [7.375, 7, 8.375, 7.25], "texture": "#1"},
+				"south": {"uv": [9.125, 6.75, 10.375, 7], "texture": "#1"},
+				"west": {"uv": [7.5, 9, 8.5, 9.25], "texture": "#1"},
+				"up": {"uv": [1.25, 8.5, 0, 7.5], "texture": "#1"},
+				"down": {"uv": [8.75, 0, 7.5, 1], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Middle Shelf",
+			"from": [4, 0, 6],
+			"to": [14, 2, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 0]},
+			"faces": {
+				"north": {"uv": [7, 9.25, 8.25, 9.5], "texture": "#1"},
+				"east": {"uv": [2, 9.5, 3, 9.75], "texture": "#1"},
+				"south": {"uv": [5.75, 9.25, 7, 9.5], "texture": "#1"},
+				"west": {"uv": [9.5, 2, 10.5, 2.25], "texture": "#1"},
+				"up": {"uv": [1.25, 8.5, 0, 7.5], "texture": "#1"},
+				"down": {"uv": [8.75, 0, 7.5, 1], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [1, 125, -8],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [1, 125, -8],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"translation": [0, 4.5, 0]
+		},
+		"gui": {
+			"rotation": [0, 153, 0],
+			"translation": [0, -4, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"fixed": {
+			"translation": [0, -5, 0],
+			"scale": [0.6, 0.6, 0.6]
+		}
+	},
+	"groups": [
+		{
+			"name": "VendingMabob",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				{
+					"name": "Top Half",
+					"origin": [8, 8, 8],
+					"color": 9,
+					"children": [
+						{
+							"name": "Control Wall",
+							"origin": [8, 8, 8],
+							"color": 0,
+							"children": [0, 1, 2]
+						},
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			]
+		}
+	]
+}
