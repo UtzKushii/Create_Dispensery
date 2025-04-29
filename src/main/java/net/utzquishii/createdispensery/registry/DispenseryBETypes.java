@@ -7,7 +7,6 @@ import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import net.utzquishii.createdispensery.CreateDispenseryMod;
 import net.utzquishii.createdispensery.content.blocks.vending_machine.VendingMachineBE;
 import net.utzquishii.createdispensery.content.blocks.vending_machine.VendingMachineRenderer;
-import net.minecraft.core.Direction;
 
 public class DispenseryBETypes {
 
