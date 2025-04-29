@@ -10,7 +10,7 @@ import net.utzquishii.createdispensery.content.blocks.vending_machine.VendingMac
 @Mod(value = CreateDispenseryMod.MOD_ID, dist = Dist.CLIENT)
 public class CreateDispenseryClient {
 
-    public CreateDispenseryClient(IEventBus modEventBus) {
+    /** public CreateDispenseryClient(IEventBus modEventBus) {
         // Add Client-side event listener for renderer registration
         modEventBus.addListener(CreateDispenseryClient::onRegisterRenderers);
     }
@@ -21,5 +21,5 @@ public class CreateDispenseryClient {
                 DispenseryBETypes.VENDING_MACHINE.get(), // Ensure this is a valid BlockEntityType
                 VendingMachineRenderer::new // Render provider (constructor reference works here)
         );
-    }
+    } **/
 }

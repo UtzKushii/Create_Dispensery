@@ -19,6 +19,7 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
+import net.utzquishii.createdispensery.CreateDispenseryMod;
 import org.jetbrains.annotations.Nullable;
 
 public class VendingMachineBlock extends DirectionalKineticBlock {
@@ -52,15 +53,18 @@ public class VendingMachineBlock extends DirectionalKineticBlock {
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
+        // Log the player's placement action
+        Direction facing = context.getHorizontalDirection().getOpposite();
+        CreateDispenseryMod.LOGGER.info("Player placed Vending Machine facing {} at {}.", facing, context.getClickedPos());
+
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos();
 
         // Check for space above
         if (pos.getY() >= level.getMaxBuildHeight() - 1 || !level.getBlockState(pos.above()).canBeReplaced(context)) {
+            CreateDispenseryMod.LOGGER.error("Block placement failed: no space for upper half at {}", pos.above());
             return null;
         }
-
-        Direction facing = context.getHorizontalDirection().getOpposite(); // Faces toward player
 
         return this.defaultBlockState()
                 .setValue(FACING, facing)
@@ -95,5 +99,29 @@ public class VendingMachineBlock extends DirectionalKineticBlock {
         return Shapes.block();
     }
 
-    // Only create BlockEntity on lower half
+    @Override
+    public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
+        return false; // Prevent replacing by rotating states via wrench
+    }
+
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+        if (newState.getBlock() == this) {
+            // Prevent recursive removal when replacing BlockState
+            return;
+        }
+
+        // Determine if this is the upper or lower half.
+        boolean isUpper = state.getValue(HALF) == DoubleBlockHalf.UPPER;
+        BlockPos otherHalf = isUpper ? pos.below() : pos.above();
+        BlockState otherState = level.getBlockState(otherHalf);
+
+        // Remove the other half if it still exists and matches
+        if (otherState.is(this) && otherState.getValue(HALF) != state.getValue(HALF)) {
+            level.destroyBlock(otherHalf, false); // Set to true if you want drops for the other half
+        }
+
+        // Call the parent class (important for proper cleanup)
+        super.onRemove(state, level, pos, newState, isMoving);
+    }
 }
