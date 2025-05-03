@@ -1,6 +1,6 @@
 package net.utzquishii.createdispensery.registry;
 
-import net.utzquishii.createdispensery.CreateDispenseryMod;
+import net.utzquishii.createdispensery.CreateDispensery;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 import net.neoforged.bus.api.IEventBus;
@@ -8,7 +8,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class DispenseryItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CreateDispenseryMod.MOD_ID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CreateDispensery.MOD_ID);
 
     public static final DeferredItem<BlockItem> VENDING_MACHINE = ITEMS.register(
             "vending_machine",

@@ -1,6 +1,6 @@
 package net.utzquishii.createdispensery.registry;
 
-import net.utzquishii.createdispensery.CreateDispenseryMod;
+import net.utzquishii.createdispensery.CreateDispensery;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -11,7 +11,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 @SuppressWarnings("all")
 public class DispenseryCreativeTabs {
-    private static final DeferredRegister<CreativeModeTab> REG = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateDispenseryMod.MOD_ID);
+    private static final DeferredRegister<CreativeModeTab> REG = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateDispensery.MOD_ID);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DISPENSERY_TAB = REG.register("vending_machine_tab", () -> CreativeModeTab.builder()
             .title(Component.translatableWithFallback("itemGroup.createdispensery.vending_machine_tab", "Create: Dispensery"))

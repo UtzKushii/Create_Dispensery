@@ -1,25 +1,18 @@
 package net.utzquishii.createdispensery;
 
+import net.createmod.ponder.foundation.PonderIndex;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent.RegisterRenderers;
-import net.utzquishii.createdispensery.registry.DispenseryBETypes;
-import net.utzquishii.createdispensery.content.blocks.vending_machine.VendingMachineRenderer;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.utzquishii.createdispensery.registry.DispenseryPartialModels;
 
-@Mod(value = CreateDispenseryMod.MOD_ID, dist = Dist.CLIENT)
+//@Mod(value = CreateDispensery.MOD_ID, dist = Dist.CLIENT)
 public class CreateDispenseryClient {
 
-    /** public CreateDispenseryClient(IEventBus modEventBus) {
-        // Add Client-side event listener for renderer registration
-        modEventBus.addListener(CreateDispenseryClient::onRegisterRenderers);
-    }
+    public static void clientInit(FMLClientSetupEvent event) {
+        DispenseryPartialModels.init();
 
-    public static void onRegisterRenderers(RegisterRenderers event) {
-        // Use the event to register your custom renderer
-        event.registerBlockEntityRenderer(
-                DispenseryBETypes.VENDING_MACHINE.get(), // Ensure this is a valid BlockEntityType
-                VendingMachineRenderer::new // Render provider (constructor reference works here)
-        );
-    } **/
+        //PonderIndex.addPlugin(new LuncheonPonderPlugin());
+    }
 }
